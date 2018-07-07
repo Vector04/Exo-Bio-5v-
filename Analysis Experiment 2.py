@@ -20,12 +20,8 @@ plt.xlabel('Time (h)')
 plt.ylabel('CO2 Concentration (ppm)')
 plt.legend()
 plt.title('Proef 2', fontsize=15)
-# plt.show()
 
-# fit a straight line from 10 to 24 hours
-
-# X = [37000, 85000]
-print(len(df05['Time (s)']))
+# fitting of lines and exponentials.
 
 
 def linear_func(t, a, b):
@@ -51,35 +47,4 @@ plot_fitted_curve(exp_func, 10, 14000, df05['Time (s)'], df05['CO2 Concentration
 plot_fitted_curve(exp_func, 10, 11000, df10['Time (s)'], df10['CO2 Concentration (ppm)'])
 plot_fitted_curve(linear_func, 37642, 87642, df05['Time (s)'], df05['CO2 Concentration (ppm)'])
 plot_fitted_curve(linear_func, 37642, 87642, df10['Time (s)'], df10['CO2 Concentration (ppm)'])
-plt.show()
-
-
-# params_tail_10, _ = curve_fit(linear_func, df10['Time (s)'].tail(48000), df10['CO2 Concentration (ppm)'].tail(48000))
-# A10, B10 = params_tail_10
-
-# plt.plot(X, [linear_func(t, A10, B10) for t in X], c='k')
-
-
-# params_tail_05, _ = curve_fit(linear_func, df05['Time (s)'].tail(48000), df05['CO2 Concentration (ppm)'].tail(48000))
-# A05, B05 = params_tail_05
-# plt.plot(X, [linear_func(t, A05, B05) for t in X], c='k')
-# print(f'Ratio of 1 gram to .5 gram gist co2 escape: {A05/A10}')
-
-
-# # exp func first 16000
-# def exp_func(t, a, b):
-#     return a * b**t
-
-
-# X = np.linspace(0, 13000, 100)
-
-# params_head_10, _ = curve_fit(exp_func, df10['Time (s)'].head(13000), df10['CO2 Concentration (ppm)'].head(13000))
-# A10, B10 = params_head_10
-
-# plt.plot(X, [exp_func(t, A10, B10) for t in X], c='k')
-
-# params_head_05, _ = curve_fit(exp_func, df05['Time (s)'].head(13000), df05['CO2 Concentration (ppm)'].head(13000))
-
-# A05, B05 = params_head_05
-# plt.plot(X, [exp_func(t, A05, B05) for t in X], c='k')
 plt.show()

@@ -3,13 +3,13 @@ import numpy as np
 from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 
-df05 = pd.read_csv('ExportedData proef 2 05 victor dex bart.csv', skiprows=1)
+df05 = pd.read_csv('ExportedData proef 2 0,5 gr gist victor dex bart.csv', skiprows=1)
 df05['Time (h)'] = df05['Time (s)'] / 3600
 df05.dropna(axis='columns', inplace=True)
 
 plt.plot(df05['Time (s)'], df05['CO2 Concentration (ppm)'], label='0,5 gr gist')
 
-df10 = pd.read_csv('ExportedData proef 2 10 victor dex bart.csv', skiprows=1)
+df10 = pd.read_csv('ExportedData proef 2 1,0 gr gist victor dex bart.csv', skiprows=1)
 df10['Time (h)'] = df10['Time (s)'] / 3600
 df10.dropna(axis='columns', inplace=True)
 

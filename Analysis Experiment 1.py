@@ -4,7 +4,7 @@ from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 
 # 0.5 gr gist:
-df05 = pd.read_csv("ExportedData proef 1 05 victor dex bart.csv", skiprows=1)
+df05 = pd.read_csv("ExportedData proef 1 0,5 gr gist victor dex bart.csv", skiprows=1)
 df05 = df05.drop('Date and Time', 1)
 df05['Time (h)'] = df05['Time (s)'] / 3600
 print(df05.head())
@@ -12,7 +12,7 @@ print(df05.head())
 print()
 
 # 1 gr gist:
-df1 = pd.read_csv('ExportedData proef 1 1 victor dex bart.csv', skiprows=1)
+df1 = pd.read_csv('ExportedData proef 1 1,0 gr gist victor dex bart.csv', skiprows=1)
 df1 = df1.drop('Date and Time', 1)
 df1['Time (h)'] = df1['Time (s)'] / 3600
 print(df1.head())
